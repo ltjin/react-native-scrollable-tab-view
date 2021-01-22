@@ -142,7 +142,7 @@ const ScrollableTabBar = createReactClass({
         <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
           {name}
         </Text>
-        {note && <Text style={[{fontSize: 12, color: '##909090'}, noteStyle]}>{note}</Text>}
+        {note && <Text style={[styles.note, noteStyle]}>{note}</Text>}
       </View>
     </Button>;
   },
@@ -233,6 +233,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingLeft: 20,
     paddingRight: 20,
+    flexDirection: 'row'
+  },
+  note: {
+    marginLeft: 3,
+    fontSize: 12,
+    color: '#909090'
   },
   container: {
     height: 50,
