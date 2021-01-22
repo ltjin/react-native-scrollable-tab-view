@@ -366,7 +366,7 @@ const ScrollableTabView = createReactClass({
     let overlayTabs = (this.props.tabBarPosition === 'overlayTop' || this.props.tabBarPosition === 'overlayBottom');
     let tabBarProps = {
       goToPage: this.goToPage,
-      tabs: this._children().map((child) => {name: child.props.tabLabel, note: child.props.note}),
+      tabs: this._children().map((child) => {return {name: child.props.tabLabel, note: child.props.note}}),
       activeTab: this.state.currentPage,
       scrollValue: this.state.scrollValue,
       containerWidth: this.state.containerWidth,
